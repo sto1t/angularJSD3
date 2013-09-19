@@ -8,7 +8,9 @@
     "es5-shim": "~2.0.8",
     "angular-resource": "~1.0.7",
     "angular-cookies": "~1.0.7",
-    "angular-sanitize": "~1.0.7"
+    "angular-sanitize": "~1.0.7",
+    "d3": "~3.3.4",
+    "nvd3": "~1.1.10-beta"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

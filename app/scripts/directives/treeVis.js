@@ -12,7 +12,7 @@ angular.module('angD3App')
 									.axisLabel('Years')
 									.tickFormat(d3.format(',r'));
 							chart.yAxis
-									.axisLabel('Trees')
+									.axisLabel('Units')
 									.tickFormat(d3.format('.01f'));
 							d3.select('#chart svg')
 									.datum(formatData())
@@ -26,13 +26,11 @@ angular.module('angD3App')
 
 						function formatData() {
 							var trees = [];
-
-							/* Pretty simple data bind... but this convention
-							 works if you are going to be computing several 
-							 lines. */
+							var hours = [];
 
 							for (var i = 0; i < $scope.years; i++) {
 								trees.push({x: i, y: $scope.treeArray[i].totalTrees});
+								hours.push({x: i, y: $scope.treeArray[i].totalHours});
 							}
 
 							return [
@@ -40,7 +38,13 @@ angular.module('angD3App')
 									values: trees,
 									key: 'Number of Trees',
 									color: '#37651a'
+								},
+								{
+									values: hours,
+									key: 'Hours Raking',
+									color: '#333'
 								}
+								
 							];
 						}
 					});

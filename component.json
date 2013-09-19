@@ -1,0 +1,8 @@
+{
+  "name": "angD3",
+  "version": "0.0.0",
+  "dependencies": {
+    "d3": "~3.3.3",
+    "nvd3": "~1.1.10-beta"
+  }
+}

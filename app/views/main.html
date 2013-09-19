@@ -1,0 +1,30 @@
+<div id="content">
+	<div class="row intro">
+		<h3>Graphing a tree population</h3>
+		Based on no science at all, this calculator assumes that each tree you plant will create new trees
+		at a net rate (so, assuming pressure from humanity, etc) of .30  trees
+		per year.
+	</div>
+	<div class="row">
+		<div class="calculator-input">
+			<form class="form" role="form" ng-submit="calculateTrees()">
+				<div class="form-group col-md-3">
+					<label for="trees">How many trees will you plant?</label>
+					<input type="number" class="form-control" data-ng-model="params.trees" max="15" min="1" required id="trees"  placeholder="5">
+				</div>
+				<div class="form-group col-md-3">
+					<label for="years">Number of years to show?</label>
+					<input type="number" class="form-control" data-ng-model="params.years" id="years" max="50" min="20" placeholder="30">
+				</div>
+				<button type="submit" class="btn btn-lg btn-default scooch">Calculate!</button>
+			</form>
+		</div>
+	</div>
+	<div class="row graph" ng-show="calculated">
+		<div class="col-md-12" >
+			<tree-vis id="chart">
+				<svg></svg>
+			</tree-vis>
+		</div>
+	</div>
+</div>
